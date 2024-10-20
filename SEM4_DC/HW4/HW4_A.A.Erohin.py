@@ -3,7 +3,7 @@ import requests
 from lxml import html
 
 
-# Парсим страницу портала GB с каталогом курсов по Пайтону (скрин HW4_1) https://gb.ru/courses/programming
+# Парсим страницу портала GB с каталогом курсов по Программированию (скрин HW4_1) https://gb.ru/courses/programming
 # Берем User-Agent (скрин HW4_2)
 
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36'}
