@@ -63,12 +63,12 @@ DOWNLOAD_DELAY = 0.5
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "hw6_unspl.pipelines.CustomImagesPipeline": 1,
+   "scrapy.pipelines.images.ImagesPipeline": 1,
 }
 
 IMAGES_STORE = "images"
 
-FEED_EXPORT_FIELDS = ['author_name', 'description' ,'categories']
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
