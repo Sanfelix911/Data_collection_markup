@@ -4,7 +4,8 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.loader import ItemLoader
 from ..items import Hw6UnsplItem
 from itemloaders.processors import MapCompose
-import json
+
+
 
 
 class Hw6ImgSpider(CrawlSpider):
@@ -26,7 +27,7 @@ class Hw6ImgSpider(CrawlSpider):
         description = response.xpath("//h1[@class = 'vev3s']/text()").get()
         loader.add_value('description', description)
 
-        image_url = response.xpath("//div[@class='WxXog']/@src").get()
+        image_url = response.xpath("//div[@class = 'wdUrX']/img/@srcset").getall()
         loader.add_value('image_urls', image_url)
 
         yield loader.load_item()

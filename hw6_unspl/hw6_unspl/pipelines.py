@@ -9,5 +9,6 @@ from itemadapter import ItemAdapter
 
 
 class Hw6UnsplPipeline:
-    def process_item(self, item, spider):
-        return item
+   def process_item(self, item, spider):
+    return item
+    
