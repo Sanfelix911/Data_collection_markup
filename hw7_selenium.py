@@ -21,10 +21,10 @@ time.sleep(1)
 
 #Тетстируем селлекторы
 
-name_elements = driver.find_elements(By.XPATH,"//a/h3/")
-print(name_elements[0].text)
-priсe_elements = driver.find_elements(By.XPATH,"//span[@class = 'woocommerce-Price-amount amount']")
-print(priсe_elements[0].text)
+# name_elements = driver.find_elements(By.XPATH,"//a/h3/")
+# print(name_elements[0].text)
+# priсe_elements = driver.find_elements(By.XPATH,"//span[@class = 'woocommerce-Price-amount amount']")
+# print(priсe_elements[0].text)
 
 # Цикл заполнения словаря
  
@@ -34,8 +34,8 @@ while True:
     shoes_elements = driver.find_elements(By.XPATH,"//div[@class = 'img']")
 
     for element in shoes_elements:
-        name_elements = driver.find_elements(By.XPATH,".//a/h3").text
-        price_elements = driver.find_elements(By.XPATH,".//span[@class = 'woocommerce-Price-amount amount']").text
+        name_elements = driver.find_element(By.XPATH,".//a/h3").text
+        price_elements = driver.find_element(By.XPATH,".//span[@class = 'woocommerce-Price-amount amount']").text
         shoes.append({"name_elements" : name_elements, "price_elements" : price_elements})
 
     next = driver.find_elements(By.XPATH,"//li/a[@class ='next page-numbers']")
