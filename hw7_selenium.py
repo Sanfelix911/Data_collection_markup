@@ -47,7 +47,7 @@ while True:
 
 driver.close()
 
-with open('shoes_result.csv', 'w',  newline='') as file:
+with open('shoes_result.csv','w', encoding='U8',  newline='') as file:
     writer = csv.DictWriter(file ,fieldnames= ["name_elements","price_elements"] )
     writer.writeheader()
     writer.writerows(shoes)
